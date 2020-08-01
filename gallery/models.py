@@ -26,4 +26,23 @@ class location(models.Model):
     def delete_location(self):
         self.delete()
 
+class Gallery(models.Model):
+    image = models.ImageField(upload_to = 'images/', null = True, blank = True)
+    name = models.CharField(max_length=30)
+    descripton = models.TextField()
+    location = models.ForeignKey(location)
+    category = models.ForeignKey(categories)
+    time_uloaded = models.DateTimeField(auto_now_add=True, null=True)
+    
+    def save_image(self):
+        self.save()
+
+    def delete_image(self):
+        self.delete()
+
+    @classmethod
+    def search_by_category(cls,search_term):
+        gallery = cls.objects.filter(category__name__icontains=search_term)
+
+        return gallery
 
