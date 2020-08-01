@@ -11,6 +11,9 @@ class categories(models.Model):
     def save_category(self):
         self.save()
 
+    def update_category(self):
+        self.update()
+
     def delete_category(self):
         self.delete()
 
@@ -22,6 +25,9 @@ class location(models.Model):
 
     def save_location(self):
         self.save()
+    
+    def update_location(self):
+        self.update()
 
     def delete_location(self):
         self.delete()
@@ -35,6 +41,9 @@ class Gallery(models.Model):
     time_uloaded = models.DateTimeField(auto_now_add=True, null=True)
     
     def save_image(self):
+        self.save()
+    
+    def update_image(self):
         self.save()
 
     def delete_image(self):
