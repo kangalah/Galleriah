@@ -30,8 +30,8 @@ class Gallery(models.Model):
     image = models.ImageField(upload_to = 'images/', null = True, blank = True)
     name = models.CharField(max_length=30)
     descripton = models.TextField()
-    location = models.ForeignKey(location)
-    category = models.ForeignKey(categories)
+    location = models.ForeignKey('location',on_delete=models.CASCADE)
+    category = models.ForeignKey('categories',on_delete=models.CASCADE)
     time_uloaded = models.DateTimeField(auto_now_add=True, null=True)
     
     def save_image(self):
