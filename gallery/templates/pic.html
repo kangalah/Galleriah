@@ -1,0 +1,50 @@
+{% extends 'base.html' %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo|Glegoo" rel="stylesheet">
+
+</head>
+
+<body>
+    <script>
+        function myFunction() {
+            var copyText = document.getElementById("myInput");
+            copyText.select();
+            document.execCommand("Copy");
+            alert("Copied the text: " + copyText.value);
+        }
+    </script>
+
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+        <div class="uk-card-media-left uk-cover-container">
+            <img src="{{image.image.url}}" alt="" uk-cover>
+            <canvas width="900" height="500"></canvas>
+        </div>
+        <div>
+            <div class="uk-card-body uk-card-secondary">
+                <div class="uk-text-center uk-card-body uk-text-large ">
+                    <h3 class="uk-card-title" style="font-family: 'Boogaloo', cursive;">{{image.name|upper}}</h3>
+                    <p style="font-family: 'Boogaloo', cursive;">{{image.time_uloaded}}/{{image.location}}</p>
+                    <hr>
+                    <p style="font-family: 'Boogaloo', cursive;">{{image.descripton}}</p>
+                    <hr>
+
+                    <input class="form-control" type="text" value="{{image.image}}" id="myInput">
+                    <a onclick="myFunction()" class="uk-button uk-button-default">Image Link</a>
+                    <hr>
+                    <p>{{image.categories.}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% endblock %}
+</body>
+
+</html>
