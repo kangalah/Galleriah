@@ -9,3 +9,5 @@ urlpatterns=[
     url(r'^images/(\d+)', views.single_photo,name = 'myimage'),
     url(r'^search/', views.search_results, name = 'search_results'),
 ]
+if settings.DEBUG:
+    urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
