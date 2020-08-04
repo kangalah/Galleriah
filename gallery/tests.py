@@ -28,13 +28,13 @@ class locationTestCase(TestCase):
 
 class GalleryTestCase(TestCase):
     def setUp(self):
-        self.Range = Image(name = 'Range', description = 'car of my dreams')
-        self.Range.save_image()
+        self.Rusle = Image(name = 'Rusle', description = 'car of my dreams')
+        self.Rusle.save_image()
 
     def test_instance(self):
-        self.assertTrue(isinstance(self.Range, Image))
+        self.assertTrue(isinstance(self.Rusle, Image))
 
     def test_save_method(self):
-        self.Range.save_image()
+        self.Rusle.save_image()
         images = Image.objects.all()
         self.assertTrue(len(images)>0)
