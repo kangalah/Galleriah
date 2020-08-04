@@ -14,17 +14,17 @@ class categoriesTestCase(TestCase):
         category = categories.objects.all()
         self.assertTrue(categories)
 
-# class locationTestCase(TestCase):
-#     def setup(self):
-#         self.Zambia = location(name = 'Zambia')
+class locationTestCase(TestCase):
+    def setup(self):
+        self.Zambia = location(name = 'Zambia')
 
-#     def test_instance(self):
-#         self.assertTrue(isinstance(self.Zambia,location))
+    def test_instance(self):
+        self.assertTrue(isinstance(self.Zambia,location))
 
-#     def test_save_method(self):
-#         self.Zambia.save_location()
-#         locations = location.objects.all()
-#         self.assertTrue(len(locations)>0)
+    def test_save_method(self):
+        self.Zambia.save_location()
+        locations = location.objects.all()
+        self.assertTrue(len(locations)>0)
 
 class GalleryTestCase(TestCase):
     def setUp(self):
