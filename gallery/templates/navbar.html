@@ -10,18 +10,18 @@
 </head>
 
 <body style="font-family: 'Bangers', cursive;">
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">PICS Gallery</a>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-secondary">
+        <a class="navbar-brand" href="/">My Profile</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Location <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
+             <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item active">
+                    <a class="navbar-brand" href="/">Locations</a>
+                </li> -->
+             </ul>
             <form action="{% url 'search_results' %}" class="form-inline my-2 my-lg-0 mr-2">
                 <div class="input-group">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="images">
