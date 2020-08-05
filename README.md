@@ -16,6 +16,8 @@ Clonethis repository to your local machine and install all the extensions listed
 
 # Running the tests.
 * To run the tests, run python manage.py test gallery
+# Link to the live site.
+gallery40.herokuapp.com/
 
 # Deployment.
 * To open local server run python manage.py runserver.
