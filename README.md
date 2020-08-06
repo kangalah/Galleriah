@@ -27,6 +27,7 @@ Clonethis repository to your local machine and install all the extensions listed
 
 # Deployment.
 * To open local server run python manage.py runserver.
+
 # link to the live site.
 * https://gallery40.herokuapp.com/
 
